@@ -7,6 +7,9 @@ function GlobalStyle() {
                 box-sizing: border-box;
                 list-style: none;
             }
+            ::-webkit-scrollbar {
+                display:none;
+            }
             body {
                 font-family: 'Open Sans', sans-serif;
             }
@@ -28,11 +31,11 @@ function GlobalStyle() {
 }
 
 export default function CustomApp({Component, pageProps}) {
-    console.log('Roda em todas as paginas!');
+    //console.log('Roda em todas as paginas!');
     return (
         <>
             <GlobalStyle />
             <Component {...pageProps} />
         </>
-    );
+    )
 }
